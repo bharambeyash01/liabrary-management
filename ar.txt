@@ -1,0 +1,16 @@
+library_asset_app/
+│
+├── main.py               ← Run this to start the app
+├── config.py             ← DB credentials + colour palette + fonts
+├── database.py           ← DatabaseManager (all SQL, zero UI)
+├── ui_helpers.py         ← Shared widget factories (lbl, btn, entry, make_treeview …)
+├── dialogs.py            ← ModalDialog base class
+├── app.py                ← Root App window, sidebar, nav routing
+│
+└── frames/               ← One file per screen
+    ├── __init__.py       ← Re-exports all frame classes cleanly
+    ├── dashboard.py      ← DashboardFrame (KPI cards)
+    ├── members.py        ← MembersFrame + MemberDialog
+    ├── library.py        ← LibraryFrame + BookDialog + IssueBookDialog
+    ├── assets.py         ← AssetFrame + AssetDialog + AssignAssetDialog
+    └── settings.py       ← SettingsFrame
